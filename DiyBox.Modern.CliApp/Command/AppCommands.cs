@@ -1,13 +1,34 @@
 ﻿using CommandDotNet;
+using DiyBox.CommandDotNet;
+using DiyBox.Core;
 
 namespace Modern.CLI.App.Template;
 
-[Command("app")]
+[Command("box")]
 public class AppCommands
 {
-    [DefaultCommand()]
-    public void AppInfo()
+    private readonly IDiyBoxWizard diyBoxWizard;
+
+    public AppCommands(
+        IDiyBoxWizard diyBoxWizard)
     {
-        Console.WriteLine("App template :)");
+        this.diyBoxWizard = diyBoxWizard;
+    }
+
+    [DefaultCommand()]
+    public void RunBoxWizard(SizeArg model)
+    {
+        Console.WriteLine("RunBoxWizard)");
+        diyBoxWizard.RunWizard(GetArgs(model));
+    }
+
+    private string[] GetArgs(SizeArg model)
+    {
+        return new string[] 
+        {
+            model.Length.ToString()
+            , model.Width.ToString()
+            , model.Height.ToString()
+        };
     }
 }

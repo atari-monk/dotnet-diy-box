@@ -1,5 +1,6 @@
 using CommandDotNet.Unity.Helper;
 using Config.Wrapper.Unity;
+using DiyBox.Core;
 using Serilog.Wrapper.Unity;
 using Unity;
 
@@ -18,6 +19,7 @@ public class UnityDependencySuite
     {
         RegisterSet<AppLoggerSet>();
         RegisterSet<AppConfigSet>();
+        RegisterSet<DiyBoxSet>();
     }
     
     protected override void RegisterCommands() => 
