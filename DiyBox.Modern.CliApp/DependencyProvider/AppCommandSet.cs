@@ -1,5 +1,7 @@
 using DIHelper.Unity;
+using DiyBox.Core;
 using Unity;
+using Unity.Injection;
 
 namespace Modern.CLI.App.Template;
 
@@ -14,10 +16,11 @@ public class AppCommandSet
 
     public override void Register()
     {
-        RegisterReadCommands();
-    }
-
-    private void RegisterReadCommands()
-    {
+        Container.RegisterSingleton<BoxCommands>(
+            new InjectionConstructor(
+                Container.Resolve<IDiyBoxWizard>(nameof(DiyBoxWizard))));
+        Container.RegisterSingleton<SheetCommands>(
+            new InjectionConstructor(
+                Container.Resolve<IDiyBoxWizard>(nameof(SheetWizard))));
     }
 }

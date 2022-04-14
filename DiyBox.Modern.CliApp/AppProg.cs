@@ -12,13 +12,21 @@ public class AppProg
 	private static bool inSession;
 
     [Subcommand]
-    public AppCommands? AppCommands { get; set; }
+    public BoxCommands? AppCommands { get; set; }
+
+    [Subcommand]
+    public SheetCommands? SheetCommands { get; set; }
 
     public AppProg(
         ILogger log
         , IConfigReader config) 
             : base(log, config)
     {
+        MannuallyRegisterCmds = new Type[]
+        {
+            typeof(BoxCommands)
+            , typeof(SheetCommands)
+        };
     }
 
     [DefaultCommand()]

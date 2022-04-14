@@ -1,15 +1,15 @@
-﻿using CommandDotNet;
+using CommandDotNet;
 using DiyBox.CommandDotNet;
 using DiyBox.Core;
 
 namespace Modern.CLI.App.Template;
 
-[Command("box")]
-public class AppCommands
+[Command("sheet")]
+public class SheetCommands
 {
     private readonly IDiyBoxWizard diyBoxWizard;
 
-    public AppCommands(
+    public SheetCommands(
         IDiyBoxWizard diyBoxWizard)
     {
         this.diyBoxWizard = diyBoxWizard;
@@ -18,7 +18,6 @@ public class AppCommands
     [DefaultCommand()]
     public void RunBoxWizard(SizeArg model)
     {
-        Console.WriteLine("RunBoxWizard)");
         diyBoxWizard.RunWizard(GetArgs(model));
     }
 
