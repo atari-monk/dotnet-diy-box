@@ -27,8 +27,8 @@ public class BoxCommands
         return new string[] 
         {
             model.Length.ToString()
-            , model.Width.ToString()
             , model.Height.ToString()
+            , model.Depth.ToString()
         };
     }
 }

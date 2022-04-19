@@ -26,8 +26,8 @@ public class SheetCommands
         return new string[] 
         {
             model.Length.ToString()
-            , model.Width.ToString()
             , model.Height.ToString()
+            , model.Depth.ToString()
         };
     }
 }
