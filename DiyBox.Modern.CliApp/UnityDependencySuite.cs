@@ -20,6 +20,7 @@ public class UnityDependencySuite
         RegisterSet<AppLoggerSet>();
         RegisterSet<AppConfigSet>();
         RegisterSet<DiyBoxSet>();
+        RegisterSet<DescriptorSet>();
     }
     
     protected override void RegisterCommands() => 
