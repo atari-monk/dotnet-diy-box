@@ -1,3 +1,4 @@
+using CLIHelper.Unity;
 using CommandDotNet.Unity.Helper;
 using Config.Wrapper.Unity;
 using DiyBox.Core;
@@ -21,6 +22,7 @@ public class UnityDependencySuite
         RegisterSet<AppConfigSet>();
         RegisterSet<DiyBoxSet>();
         RegisterSet<DescriptorSet>();
+        RegisterSet<CliIOSet>();
     }
     
     protected override void RegisterCommands() => 
