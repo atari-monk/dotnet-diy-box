@@ -6,29 +6,19 @@ namespace Modern.CLI.App.Template;
 
 [Command("box")]
 public class BoxCommands
+    : DiyBoxCommands
 {
-    private readonly IDiyBoxWizard diyBoxWizard;
-
     public BoxCommands(
-        IDiyBoxWizard diyBoxWizard)
+        IDictionary<Wizards, IDiyBoxWizard> wizards)
+        : base(wizards)
     {
-        this.diyBoxWizard = diyBoxWizard;
     }
 
     [DefaultCommand()]
     public void RunBoxWizard(SizeArg model)
     {
-        diyBoxWizard.RunWizard(
-            GetArgs(model));
-    }
-
-    private string[] GetArgs(SizeArg model)
-    {
-        return new string[] 
-        {
-            model.Length.ToString()
-            , model.Height.ToString()
-            , model.Depth.ToString()
-        };
+        GetWizard(Wizards.DiyBoxWizard)
+            .RunWizard(
+                GetArgs(model));
     }
 }

@@ -6,28 +6,27 @@ namespace Modern.CLI.App.Template;
 
 [Command("sheet")]
 public class SheetCommands
+    : DiyBoxCommands
 {
-    private readonly IDiyBoxWizard diyBoxWizard;
-
-    public SheetCommands(
-        IDiyBoxWizard diyBoxWizard)
+     public SheetCommands(
+        IDictionary<Wizards, IDiyBoxWizard> wizards)
+        : base(wizards)
     {
-        this.diyBoxWizard = diyBoxWizard;
     }
 
     [DefaultCommand()]
-    public void RunBoxWizard(SizeArg model)
+    public void ComputeSheetSize(SizeArg model)
     {
-        diyBoxWizard.RunWizard(GetArgs(model));
+        GetWizard(Wizards.SheetWizard)
+            .RunWizard(
+                GetArgs(model));
     }
 
-    private string[] GetArgs(SizeArg model)
+    [Command("print")]
+    public void PrintInstructions(SizeArg model)
     {
-        return new string[] 
-        {
-            model.Length.ToString()
-            , model.Height.ToString()
-            , model.Depth.ToString()
-        };
+        GetWizard(Wizards.PrintOnSheet)
+            .RunWizard(
+                GetArgs(model));
     }
 }

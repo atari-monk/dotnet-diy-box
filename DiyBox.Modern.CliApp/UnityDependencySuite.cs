@@ -20,9 +20,12 @@ public class UnityDependencySuite
     {
         RegisterSet<AppLoggerSet>();
         RegisterSet<AppConfigSet>();
-        RegisterSet<DiyBoxSet>();
-        RegisterSet<DescriptorSet>();
         RegisterSet<CliIOSet>();
+        RegisterSet<DiyBoxCalculatorSet>();
+        RegisterSet<DescriptorSet>();
+        RegisterSet<DescriptorDictionarySet>();
+        RegisterSet<WizardSet>();
+        RegisterSet<WizardDictionarySet>();
     }
     
     protected override void RegisterCommands() => 
