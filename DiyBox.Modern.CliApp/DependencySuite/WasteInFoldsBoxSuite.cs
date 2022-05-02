@@ -4,7 +4,7 @@ using Unity;
 namespace DiyBox.Modern.CliApp;
 
 public class WasteInFoldsBoxSuite
-    : DIHelper.Unity.UnityDependencySuite
+    : DiyBoxSuite
 {
     public WasteInFoldsBoxSuite(
         IUnityContainer container) 
@@ -12,7 +12,7 @@ public class WasteInFoldsBoxSuite
     {
     }
 
-    protected virtual void RegisterBoxComputer()
+    protected override void RegisterBoxComputer()
     {
         RegisterSet<DiyBoxWithWasteInFoldsSet>();
     }

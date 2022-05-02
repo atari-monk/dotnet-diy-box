@@ -4,7 +4,7 @@ using Unity;
 namespace DiyBox.Modern.CliApp;
 
 public class EvenFoldsBoxSuite
-    : DIHelper.Unity.UnityDependencySuite
+    : DiyBoxSuite
 {
     public EvenFoldsBoxSuite(
         IUnityContainer container) 
@@ -12,7 +12,7 @@ public class EvenFoldsBoxSuite
     {
     }
 
-    protected virtual void RegisterBoxComputer()
+    protected override void RegisterBoxComputer()
     {
         RegisterSet<DiyBoxWithEvenFoldsSet>();
     }
