@@ -7,10 +7,10 @@ using Unity;
 
 namespace Modern.CLI.App.Template;
 
-public class UnityDependencySuite 
+public abstract class DiyBoxSuite
     : DIHelper.Unity.UnityDependencySuite
 {
-    public UnityDependencySuite(
+    public DiyBoxSuite(
         IUnityContainer container) 
         : base(container) 
     {
@@ -21,13 +21,15 @@ public class UnityDependencySuite
         RegisterSet<AppLoggerSet>();
         RegisterSet<AppConfigSet>();
         RegisterSet<CliIOSet>();
-        RegisterSet<DiyBoxCalculatorSet>();
+        RegisterBoxComputer();
         RegisterSet<DescriptorSet>();
         RegisterSet<DescriptorDictionarySet>();
         RegisterSet<WizardSet>();
         RegisterSet<WizardDictionarySet>();
     }
-    
+
+    protected abstract void RegisterBoxComputer();
+
     protected override void RegisterCommands() => 
         RegisterSet<AppCommandSet>();
 

@@ -3,6 +3,6 @@ using Modern.CLI.App.Template;
 using Unity;
 
 IBootstraper booter = new Bootstraper(
-    new UnityDependencySuite(
+    new EvenFoldsBoxSuite(
         new UnityContainer().AddExtension(new Diagnostic())));
 booter.Boot(args);
