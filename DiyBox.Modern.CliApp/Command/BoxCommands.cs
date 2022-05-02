@@ -2,7 +2,7 @@
 using DiyBox.CommandDotNet;
 using DiyBox.Core;
 
-namespace Modern.CLI.App.Template;
+namespace DiyBox.Modern.CliApp;
 
 [Command("box")]
 public class BoxCommands

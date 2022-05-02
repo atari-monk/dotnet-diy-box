@@ -1,7 +1,7 @@
 using DiyBox.CommandDotNet;
 using DiyBox.Core;
 
-namespace Modern.CLI.App.Template;
+namespace DiyBox.Modern.CliApp;
 
 public abstract class DiyBoxCommands
 {

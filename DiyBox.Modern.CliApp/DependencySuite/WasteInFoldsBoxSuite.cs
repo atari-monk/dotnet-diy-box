@@ -1,7 +1,7 @@
 using DiyBox.Core;
 using Unity;
 
-namespace Modern.CLI.App.Template;
+namespace DiyBox.Modern.CliApp;
 
 public class WasteInFoldsBoxSuite
     : DIHelper.Unity.UnityDependencySuite

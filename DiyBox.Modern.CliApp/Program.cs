@@ -1,5 +1,5 @@
 ﻿using DIHelper;
-using Modern.CLI.App.Template;
+using DiyBox.Modern.CliApp;
 using Unity;
 
 IBootstraper booter = new Bootstraper(

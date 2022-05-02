@@ -5,7 +5,7 @@ using DiyBox.Core;
 using Serilog.Wrapper.Unity;
 using Unity;
 
-namespace Modern.CLI.App.Template;
+namespace DiyBox.Modern.CliApp;
 
 public abstract class DiyBoxSuite
     : DIHelper.Unity.UnityDependencySuite

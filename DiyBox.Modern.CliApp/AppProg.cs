@@ -4,7 +4,7 @@ using CommandDotNet.Unity.Helper;
 using Config.Wrapper;
 using Serilog;
 
-namespace Modern.CLI.App.Template;
+namespace DiyBox.Modern.CliApp;
 
 public class AppProg 
     : AppProgUnity<AppProg>
