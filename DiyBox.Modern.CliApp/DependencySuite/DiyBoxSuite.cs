@@ -1,8 +1,5 @@
-using CLIHelper.Unity;
 using CommandDotNet.Unity.Helper;
-using Config.Wrapper.Unity;
 using DiyBox.Core;
-using Serilog.Wrapper.Unity;
 using Unity;
 
 namespace DiyBox.Modern.CliApp;
@@ -18,9 +15,6 @@ public abstract class DiyBoxSuite
 
     protected override void RegisterAppData()
     {
-        RegisterSet<AppLoggerSet>();
-        RegisterSet<AppConfigSet>();
-        RegisterSet<CliIOSet>();
         RegisterBoxComputer();
         RegisterSet<DescriptorSet>();
         RegisterSet<DescriptorDictionarySet>();
