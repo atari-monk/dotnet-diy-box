@@ -15,7 +15,7 @@ public class BoxCommands
     }
 
     [DefaultCommand()]
-    public void RunBoxWizard(SizeArg model)
+    public void RunDiyBoxWizardCmd(Size3dArg model)
     {
         GetWizard(Wizards.DiyBoxWizard)
             .RunWizard(

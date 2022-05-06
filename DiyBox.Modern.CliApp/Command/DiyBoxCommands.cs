@@ -18,13 +18,22 @@ public abstract class DiyBoxCommands
         return wizards[wiz];
     }
 
-    protected string[] GetArgs(SizeArg model)
+    protected string[] GetArgs(Size3dArg model)
     {
         return new string[] 
         {
             model.Length.ToString()
             , model.Height.ToString()
             , model.Depth.ToString()
+        };
+    }
+
+    protected string[] GetArgs(Size2dArg model)
+    {
+        return new string[] 
+        {
+            model.Length.ToString()
+            , model.Height.ToString()
         };
     }
 }
