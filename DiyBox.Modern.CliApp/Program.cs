@@ -18,7 +18,7 @@ var suites = new Dictionary<SuiteFilter, IDependencySuite>
 };
 
 IMultiBootstraper booter = new MultiBootstraper(suites);
-booter.Boot(args, new SuiteFilter(true));
+booter.CreateApp(new SuiteFilter(true));
 
 var config = unity.Resolve<IConfigReader>();
 var diyBoxSettings = config.GetConfigSection<DiyBoxSettings>(nameof(DiyBoxSettings));
@@ -39,4 +39,4 @@ else
         , new WasteInFoldsBoxSuite(unity));
 }
 
-booter.Boot(args);
+booter.RunApp(args);
