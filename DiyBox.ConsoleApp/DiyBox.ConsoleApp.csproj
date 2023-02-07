@@ -12,14 +12,10 @@
 		<PackageReference Include="DIHelper" Version="1.0.0"/>
 		<PackageReference Include="CliHelper" Version="1.0.0"/>
 		<PackageReference Include="Config.Wrapper" Version="1.0.0"/>
-		<PackageReference Include="CommandDotNet.Helper" Version="1.0.0"/>
-		<PackageReference Include="CommandDotNet.IoC.Unity" Version="1.0.0"/>
-		<PackageReference Include="CommandDotNet.Unity.Helper" Version="1.0.0"/>
 		<PackageReference Include="Serilog.Wrapper" Version="1.0.0"/>
+		<PackageReference Include="CLIFramework" Version="1.0.0"/>
+		<PackageReference Include="DiyBox.Core" Version="1.0.0"/>
 		<PackageReference Include="Unity" Version="5.11.10"/>
-		<PackageReference Include="CommandDotNet" Version="6.1.0-alpha.repl"/>
-		<PackageReference Include="CommandDotNet.DataAnnotations" Version="2.0.3"/>
-		<PackageReference Include="CommandDotNet.NameCasing" Version="3.0.1"/>
 		<PackageReference Include="Microsoft.Extensions.Configuration" Version="6.0.1"/>
 		<PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="6.0.0"/>
 		<PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="6.0.1"/>
@@ -28,16 +24,15 @@
 		<PackageReference Include="Serilog.Sinks.Console" Version="4.0.1"/>
 		<PackageReference Include="Serilog.Sinks.File" Version="5.0.0"/>
 	</ItemGroup>
-
+	
 	<ItemGroup>
 		<None Update="appsettings.json">
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</None>
 	</ItemGroup>
-	
+
 	<ItemGroup>
 		<ProjectReference Include="..\DiyBox.Core\DiyBox.Core.csproj" />
-		<ProjectReference Include="..\DiyBox.CommandDotNet\DiyBox.CommandDotNet.csproj" />
 	</ItemGroup>
 
 </Project>
